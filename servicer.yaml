@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: appname-service
+  labels:
+    name: appname-service
+spec:
+  type: LoadBalancer
+  selector:
+    name: "poddeployment"
+  ports:
+  - port: 80
+    targetPort: 5000
+  
